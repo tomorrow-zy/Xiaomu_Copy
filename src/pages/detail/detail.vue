@@ -15,10 +15,9 @@
       :contents="contents"
       @readBook="readBook"
     />
-    <!--     组件点击事件不起效 
-    <DetailBottom/>
-    -->
-    <div class="detail-bottom">
+    <DetailBottom  :is-in-shelf="isInShelf" @handleShelf="handleShelf" @readBook="readBook"/>
+   
+    <!-- <div class="detail-bottom">
       <div class="detail-btn-wrapper">
         <button
           :class="isInShelf ? 'detail-btn-remove' : 'detail-btn-shelf'"
@@ -35,7 +34,7 @@
           阅读
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -44,6 +43,7 @@ import DetailBook from '../../components/detail/DetailBook'
 import DetailStat from '../../components/detail/DetailStat'
 import DetailRate from '../../components/detail/DetailRate'
 import DetailContents from '../../components/detail/DetailContents'
+import DetailBottom from '../../components/detail/DetailBottom'
 import { bookDetail, bookRankSave, bookContents, bookShelf, bookShelfSave, bookShelfRemove } from '../../API/index'
 import { getStorageSync } from '../../API/wechat'
 
@@ -52,7 +52,8 @@ export default {
     DetailBook,
     DetailStat,
     DetailRate,
-    DetailContents
+    DetailContents,
+    DetailBottom
   },
   data () {
     return {

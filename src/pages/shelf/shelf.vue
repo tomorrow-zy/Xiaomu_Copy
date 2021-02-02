@@ -1,7 +1,7 @@
 <template>
   <div>
     <ShelfUserInfo :userInfo="userInfo" :readDay="readDay" :num="shelfList.length-1"/>
-    <div class="shelf-list-wrapper">
+    <!-- <div class="shelf-list-wrapper">
       <div class="shelf-list-inner">
         <div
           class="shelf-book"
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

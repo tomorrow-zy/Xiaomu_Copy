@@ -3,7 +3,7 @@
     <div class="detail-btn-wrapper">
       <button
         :class="isInShelf ? 'detail-btn-remove' : 'detail-btn-shelf'"
-        @click="handleShelf123"
+        @click="handleShelf"
       >
         {{isInShelf ? '移出书架' : '加入书架'}}
       </button>
@@ -25,7 +25,7 @@
       isInShelf: Boolean
     },
     methods: {
-      handleShelf123 () {
+      handleShelf () {
         this.$emit('handleShelf')
       },
       readBook () {
